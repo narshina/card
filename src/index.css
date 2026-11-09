@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-maroon: #4a101c;
+  --color-maroon-deep: #320a13;
+  --color-maroon-rich: #5c1826;
+  --color-ivory: #f8f3e9;
+  --color-ivory-soft: #efe6d4;
+  --color-gold: #c6a46a;
+  --color-gold-light: #e0c48a;
+  --color-gold-dark: #9a7a3e;
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-display: "Cinzel", "Cormorant Garamond", serif;
+  --font-arabic: "Amiri", "Noto Naskh Arabic", serif;
+  --font-script: "Allura", "Cormorant Garamond", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-serif);
+  background: #4a101c;
+  color: #f8f3e9;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #c6a46a;
+  color: #4a101c;
+}
+
+.gold-text {
+  background: linear-gradient(180deg, #f0e2b8 0%, #c6a46a 48%, #9a7a3e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gold-border {
+  border: 1px solid #c6a46a;
+}
+
+.pattern-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='none' stroke='%23C6A46A' stroke-width='0.55' opacity='0.12'%3E%3Cpath d='M48 10 L56 28 L74 36 L56 44 L48 62 L40 44 L22 36 L40 28 Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.ivory-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%234A101C' stroke-width='0.5' opacity='0.08'%3E%3Cpath d='M40 8 L48 24 L64 32 L48 40 L40 56 L32 40 L16 32 L32 24 Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.envelope-flap {
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.wax-seal {
+  background:
+    radial-gradient(circle at 32% 28%, #f3e3b8 0%, #c6a46a 42%, #8d6b32 100%);
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.35),
+    inset 0 2px 8px rgba(255, 255, 255, 0.28),
+    inset 0 -6px 12px rgba(80, 50, 10, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
